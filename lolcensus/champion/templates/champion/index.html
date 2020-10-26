@@ -1,0 +1,75 @@
+{% extends "champion/base.html" %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+{% block header %}
+<div class="header">
+    <img class="header-img" src="{% static 'champion/images/league-char-logo.png' %}"  alt="header image"/>
+    <div class="nav-bar">
+        <a class="nav-link" href="#">CHAMPIONS</a>
+        <a class="nav-link" href="#">SUMMONERS</a>
+        <a class="nav-link" href="#">E-SPORT</a>
+        <a class="nav-link" href="#">STATUS</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="main-section">
+    <div class="champion-list">
+        {% for name, image in champion_dict.items %}
+            <div class="champion">
+                <a href="#">
+                    <img class="champion-img" src="{% static 'champion/ddragon/dragontail-10.2.1/10.2.1/img/champion/' %}{{ image }}" alt="{{ name }}"/>
+                    <p class="champion-name">{{ name }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+    <div class="sitemap">
+        <div class="sitemap-left">
+            <ul class="no-bullet">
+                <li><a href="#">CHAMPIONS</a></li>
+                <li><a href="#">SUMMONERS</a></li>
+                <li><a href="#">E-SPORTS</a></li>
+            </ul>
+        </div>
+        <div class="sitemap-center">
+            <ul class="no-bullet">
+                <li><a href="#">SERVER STATUS</a></li>
+                <li><a href="#">RIOT API</a></li>
+                <li><a href="#">COOKIE POLICY</a></li>
+            </ul>
+        </div>
+        <div class="sitemap-right">
+            <ul class="no-bullet">
+                <li><a href="#">GITHUB</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="horizontal-line">
+    <div class="bottom-footer">
+        Copyright &copy; {{year}}
+        <span class="dark-line">|</span>
+        All Rights Reserved
+        <span class="dark-line">|</span>
+        <a href="#">Terms of Service</a>
+        <span class="dark-line">|</span>
+        <a href="#">Privacy Policy</a>
+    </div>
+    <div class="riot-disclaimer">
+        League Census isn't endorsed by Riot Games and doesn't reflect the views
+        or opinions of Riot Games or anyone officially involved in producing
+        or managing League of Legends. League of Legends and Riot Games
+        are trademarks or registered trademarks of Riot Games, Inc.
+        League of Legends &copy Riot Games, Inc.
+    </div>
+</div>
+{% endblock %}
