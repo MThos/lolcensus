@@ -19,7 +19,6 @@ class ChampionList(View):
         for key in champion_data['data']:
             row = champion_data['data'][key]
             champion_dict[row['name']] = row['image']['full']
-        print(champion_dict)
 
         return render(request, "champion/index.html", {
             "year": year,
