@@ -8,7 +8,7 @@ LEAGUE CENSUS is a **Django Web Application** for retrieval of summoner and cham
 
 This application also makes use of Cassiopeia Library, written by **Meraki Analytics**. You can find their Github page [here](https://github.com/meraki-analytics/cassiopeia)
 
-![Image of Champion List](https://imgur.com/a/8PNvpAz)
+[Image of Champion List](https://imgur.com/a/8PNvpAz)
 
 
 ## Version:
