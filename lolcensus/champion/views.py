@@ -12,7 +12,6 @@ class ChampionList(View):
     def get(self, request):
         year = datetime.datetime.now().year
         get_current_lang = translation.get_language()
-        # load champions
         data = open(os.path.join(settings.BASE_DIR,  'champion/static/champion/ddragon/dragontail-10.2.1/10.2.1/data/en_us/champion.json')).read()
         champion_data = json.loads(data)
         champion_dict = {}

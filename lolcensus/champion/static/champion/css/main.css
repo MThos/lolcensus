@@ -54,14 +54,15 @@ ul {
 }
 
 .champion {
-    border: 5px solid transparent;
+    border: 4px solid transparent;
     display: block;
-    flex: 1 0 15%;
+    flex: 1 0 18%;
     text-align: center;
 }
 
 .champion:hover {
-    border: 5px solid #fbc02d;
+    background: #141414;
+    border: 4px solid #fbc02d;
 }
 
 .champion-img {
@@ -78,6 +79,7 @@ ul {
 }
 
 .champion-name {
+    font-size: 0.9rem;
     font-weight: 800;
     margin-top: 10px;
     text-transform: uppercase;
