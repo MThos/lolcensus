@@ -3,26 +3,20 @@
 
 {% block content %}
 <div class="main-section">
-    {% for key, value in champion_data.items %}
-        {% if key == "name" %}
-            <div class="champion-img-large">
-                <img src="{% static 'champion/ddragon/dragontail-10.2.1/img/champion/loading' %}/{{ value }}_0.jpg" alt="{{ value }}"/>
+    <div class="champion-top">
+        <div class="champion-img-large">
+            <img src="{% static 'champion/ddragon/dragontail-10.2.1/img/champion/loading' %}/{{ champion_data.name }}_0.jpg" alt="{{ champion_data.name }}"/>
+        </div>
+        <div class="champion-basics">
+            <div class="champion-name">{{ champion_data.name }}</div>
+            <div class="champion-title">'{{ champion_data.title }}'</div>
+            <div class="champion-tags">
+                {% for value in champion_data.tags %}
+                    <div class="champion-tag">[{{ value }}]</div>
+                {% endfor %}
             </div>
-        {% endif %}
-        {% if key == "name" %}
-            <div class="champion-name">{{ value }}</div>
-        {% endif %}
-        {% if key == "title" %}
-            <div class="champion-title">'{{ value }}'</div>
-        {% endif %}
-        {% if key == "tags" %}
-            {% for tag_value in value %}
-                <div class="champion-tags">{{ tag_value }}</div>
-            {% endfor %}
-        {% endif %}
-        {% if key == "lore" %}
-            <div class="champion-lore">{{ value }}</div>
-        {% endif %}
-    {% endfor %}
+            <div class="champion-lore">{{ champion_data.lore }}</div>
+        </div>
+    </div>
 </div>
 {% endblock %}

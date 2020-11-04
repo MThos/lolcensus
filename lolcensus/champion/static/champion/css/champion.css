@@ -1,6 +1,6 @@
 /* Tag List - Alphabetical */
 html, body {
-    background: #111111;
+    background: #151515;
     color: #faf6ee;
     font-family: 'Nunito', sans-serif;
     font-size: 1.1rem;
@@ -8,6 +8,7 @@ html, body {
     letter-spacing: 0.1rem;
     line-height: 1.5rem;
     min-width: 100%;
+    max-width: 900px;
 }
 
 a {
@@ -65,13 +66,18 @@ ul {
     border: 4px solid #fbc02d;
 }
 
+.champion-basics {
+    flex: 2;
+    padding: 20px;
+}
+
 .champion-list-img {
     margin-top: 20px;
     width: 100px;
 }
 
 .champion-img-large {
-    float: left;
+    flex: 1;
 }
 
 .champion-list {
@@ -83,7 +89,8 @@ ul {
 }
 
 .champion-list-name {
-    font-size: 0.9rem;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
     font-weight: 800;
     margin-top: 10px;
     text-transform: uppercase;
@@ -95,7 +102,8 @@ ul {
 
 .champion-name {
     color: #fbc02d;
-    font-size: 2.0rem;
+    font-size: 3.0rem;
+    font-family: 'Shadows Into Light', cursive;
     font-weight: 800;
     margin: 10px 0 5px 0;
     text-align: center;
@@ -107,6 +115,19 @@ ul {
     text-align: center;
 }
 
+.champion-tag {
+    display: inline;
+}
+
+.champion-tags {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.champion-top {
+    display: flex;
+}
+
 .dark-line {
     color: rgba(50, 50, 50, 0.4);
     font-weight: 800;
@@ -115,7 +136,7 @@ ul {
 
 .footer {
     background: #080808;
-    border-top: 2px solid #000;
+    border-top: 2px solid black;
     bottom: 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.8rem;
@@ -142,7 +163,7 @@ ul {
 
 .header-img {
     width: 100%;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid black;
 }
 
 .horizontal-line {
@@ -156,12 +177,10 @@ ul {
     color: rgba(255, 255, 255, 0.9);
     flex: 1;
     font-weight: 600;
-    margin: 20px auto 20px auto;
-    min-width: 94vw;
+    margin: 0 auto 0 auto;
     padding: 5px;
     height: fit-content;
-    width: fit-content;
-    max-width: 94%;
+    width: 100%;
 }
 
 .nav-bar {
@@ -210,6 +229,8 @@ ul {
 
 .wrapper {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 900px;
 }
