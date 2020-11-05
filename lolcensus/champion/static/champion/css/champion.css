@@ -1,4 +1,3 @@
-/* Tag List - Alphabetical */
 html, body {
     background: #151515;
     color: #faf6ee;
@@ -47,7 +46,6 @@ ul {
     list-style-type: square;
 }
 
-/* Class List - Alphabetical */
 .bottom-footer {
     padding: 0 20px;
     margin-top: 20px;
@@ -66,50 +64,36 @@ ul {
     border: 4px solid #fbc02d;
 }
 
-.champion-bars {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 50px;
+.champion-basics {
+    flex: 2;
+    padding: 20px 10px 20px 20px;
 }
 
-.champion-bar-name {
-    flex: 1
+.champion-bar {
+    cursor: crosshair;
+    margin: 0 0 5px 70px;
+}
+
+.champion-bar-icon {
+    float: left;
+    height: 40px;
+    margin-right: 2px;
 }
 
 .champion-attack {
     background: rgba(218, 44, 67, 1);
-    flex: 1;
-    margin: 2px 0;
-    padding: 3px;
 }
 
 .champion-defense {
     background: rgba(30, 144, 255, 1);
-    flex: 1;
-    margin: 2px 0;
-    padding: 3px;
 }
 
 .champion-magic {
     background: rgba(60, 179, 113, 1);
-    flex: 1;
-    margin: 2px 0;
-    padding: 3px;
 }
 
 .champion-difficulty {
     background: rgba(106, 90, 205, 1);
-    flex: 1;
-    margin: 2px 0;
-    padding: 3px;
-}
-
-.champion-basics {
-    flex: 2;
-    padding: 20px;
 }
 
 .champion-list-img {
@@ -145,7 +129,7 @@ ul {
 }
 
 .champion-lore {
-    margin-top: 25px;
+    margin: 25px 0 40px 0;
 }
 
 .champion-name {
@@ -265,6 +249,13 @@ ul {
     margin-top: -20px;
     position: absolute;
     right: 10px;
+}
+
+.progress {
+    background: black;
+    font-size: 1.0rem;
+    height: 40px;
+    width: 350px;
 }
 
 .riot-disclaimer {

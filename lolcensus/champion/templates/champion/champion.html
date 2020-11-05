@@ -18,15 +18,29 @@
                 {% endfor %}
             </div>
             <div class="champion-lore">"{{ champion_data.lore }}"</div>
-            <div class="champion-bars">
-                <div class="champion-bar-name">ATTACK</div>
-                <div class="champion-attack progress-bar" style="width: {{ champion_data.info.attack|mul:10 }}%">{{ champion_data.info.attack }}</div>
-                <div class="champion-bar-name">DEFENSE</div>
-                <div class="champion-defense progress-bar" style="width: {{ champion_data.info.defense|mul:10 }}%">{{ champion_data.info.defense }}</div>
-                <div class="champion-bar-name">MAGIC</div>
-                <div class="champion-magic progress-bar" style="width: {{ champion_data.info.magic|mul:10 }}%">{{ champion_data.info.magic }}</div>
-                <div class="champion-bar-name">DIFFICULTY</div>
-                <div class="champion-difficulty progress-bar" style="width: {{ champion_data.info.difficulty|mul:10 }}%">{{ champion_data.info.difficulty }}</div>
+            <div class="champion-bar">
+                <img class="champion-bar-icon" src="{% static 'champion/images/sword.png' %}" alt="Attack" title="Attack" />
+                <div class="progress">
+                    <div class="champion-attack progress-bar" title="Attack" style="width: {{ champion_data.info.attack|mul:10 }}%">{{ champion_data.info.attack }}</div>
+                </div>
+            </div>
+            <div class="champion-bar">
+                <img class="champion-bar-icon" src="{% static 'champion/images/shield.png' %}" alt="Defense" title="Defense" />
+                <div class="progress">
+                    <div class="champion-defense progress-bar" title="Defense" style="width: {{ champion_data.info.defense|mul:10 }}%">{{ champion_data.info.defense }}</div>
+                </div>
+            </div>
+            <div class="champion-bar">
+                <img class="champion-bar-icon" src="{% static 'champion/images/flame.png' %}" alt="Magic" title="Magic" />
+                <div class="progress">
+                    <div class="champion-magic progress-bar" title="Magic" style="width: {{ champion_data.info.magic|mul:10 }}%">{{ champion_data.info.magic }}</div>
+                </div>
+            </div>
+            <div class="champion-bar">
+                <img class="champion-bar-icon" src="{% static 'champion/images/stairs.png' %}" alt="Difficulty" title="Difficulty" />
+                <div class="progress">
+                    <div class="champion-difficulty progress-bar" title="Difficulty" style="width: {{ champion_data.info.difficulty|mul:10 }}%">{{ champion_data.info.difficulty }}</div>
+                </div>
             </div>
         </div>
     </div>
