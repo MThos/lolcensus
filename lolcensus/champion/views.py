@@ -34,6 +34,7 @@ def champion(request, champion_name):
     for key, value in json_dump['data'][champion_name].items():
         champion_data[key] = [value][0]
 
+    patch = json_dump['version']
     print(champion_data)
 
     return render(request, "champion/champion.html", {
@@ -41,4 +42,5 @@ def champion(request, champion_name):
         "get_current_language": get_current_lang,
         "tab_title": "League Census",
         "champion_data": champion_data,
+        "patch": patch
     })

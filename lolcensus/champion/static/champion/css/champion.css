@@ -66,6 +66,47 @@ ul {
     border: 4px solid #fbc02d;
 }
 
+.champion-bars {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.champion-bar-name {
+    flex: 1
+}
+
+.champion-attack {
+    background: rgba(218, 44, 67, 1);
+    flex: 1;
+    margin: 2px 0;
+    padding: 3px;
+}
+
+.champion-defense {
+    background: rgba(30, 144, 255, 1);
+    flex: 1;
+    margin: 2px 0;
+    padding: 3px;
+}
+
+.champion-magic {
+    background: rgba(60, 179, 113, 1);
+    flex: 1;
+    margin: 2px 0;
+    padding: 3px;
+}
+
+.champion-difficulty {
+    background: rgba(106, 90, 205, 1);
+    flex: 1;
+    margin: 2px 0;
+    padding: 3px;
+}
+
 .champion-basics {
     flex: 2;
     padding: 20px;
@@ -77,7 +118,14 @@ ul {
 }
 
 .champion-img-large {
+    -webkit-filter: contrast(120%) brightness(120%);
+    filter: contrast(120%) brightness(120%);
     flex: 1;
+    margin-top: 10px;
+}
+
+.champion-img-large:hover {
+    cursor: crosshair;
 }
 
 .champion-list {
@@ -195,7 +243,7 @@ ul {
 }
 
 .nav-link {
-    border: 2px dotted #080808;
+    border: 2px solid #080808;
     color: #080808;
     display: flex;
     flex: 1;
@@ -209,6 +257,14 @@ ul {
 
 .no-bullet {
     list-style-type: none;
+}
+
+.patch {
+    color: #222222;
+    font-size: 0.8rem;
+    margin-top: -20px;
+    position: absolute;
+    right: 10px;
 }
 
 .riot-disclaimer {

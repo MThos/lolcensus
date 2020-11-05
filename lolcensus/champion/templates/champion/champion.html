@@ -1,5 +1,6 @@
 {% extends "champion/base.html" %}
 {% load static %}
+{% load mathfilters %}
 
 {% block content %}
 <div class="main-section">
@@ -8,6 +9,7 @@
             <img src="{% static 'champion/ddragon/dragontail-10.2.1/img/champion/loading' %}/{{ champion_data.name }}_0.jpg" alt="{{ champion_data.name }}"/>
         </div>
         <div class="champion-basics">
+            <div class="patch">v{{ patch }}</div>
             <div class="champion-name">{{ champion_data.name }}</div>
             <div class="champion-title">'{{ champion_data.title }}'</div>
             <div class="champion-tags">
@@ -15,7 +17,17 @@
                     <div class="champion-tag">[{{ value }}]</div>
                 {% endfor %}
             </div>
-            <div class="champion-lore">{{ champion_data.lore }}</div>
+            <div class="champion-lore">"{{ champion_data.lore }}"</div>
+            <div class="champion-bars">
+                <div class="champion-bar-name">ATTACK</div>
+                <div class="champion-attack progress-bar" style="width: {{ champion_data.info.attack|mul:10 }}%">{{ champion_data.info.attack }}</div>
+                <div class="champion-bar-name">DEFENSE</div>
+                <div class="champion-defense progress-bar" style="width: {{ champion_data.info.defense|mul:10 }}%">{{ champion_data.info.defense }}</div>
+                <div class="champion-bar-name">MAGIC</div>
+                <div class="champion-magic progress-bar" style="width: {{ champion_data.info.magic|mul:10 }}%">{{ champion_data.info.magic }}</div>
+                <div class="champion-bar-name">DIFFICULTY</div>
+                <div class="champion-difficulty progress-bar" style="width: {{ champion_data.info.difficulty|mul:10 }}%">{{ champion_data.info.difficulty }}</div>
+            </div>
         </div>
     </div>
 </div>
