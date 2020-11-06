@@ -4,11 +4,12 @@
 
 {% block content %}
 <div class="main-section">
+    <!-- top start -->
     <div class="champion-top">
-        <div class="champion-img-large">
-            <img src="{% static 'champion/ddragon/dragontail-10.2.1/img/champion/loading' %}/{{ champion_data.name }}_0.jpg" alt="{{ champion_data.name }}"/>
+        <div class="champion-left">
+            <img class="champion-img-large" src="{% static 'champion/ddragon/dragontail-10.2.1/img/champion/loading' %}/{{ champion_data.name }}_0.jpg" alt="{{ champion_data.name }}"/>
         </div>
-        <div class="champion-basics">
+        <div class="champion-right">
             <div class="patch">v{{ patch }}</div>
             <div class="champion-name">{{ champion_data.name }}</div>
             <div class="champion-title">'{{ champion_data.title }}'</div>
@@ -18,31 +19,30 @@
                 {% endfor %}
             </div>
             <div class="champion-lore">"{{ champion_data.lore }}"</div>
-            <div class="champion-bar">
-                <img class="champion-bar-icon" src="{% static 'champion/images/sword.png' %}" alt="Attack" title="Attack" />
-                <div class="progress">
-                    <div class="champion-attack progress-bar" title="Attack" style="width: {{ champion_data.info.attack|mul:10 }}%">{{ champion_data.info.attack }}</div>
-                </div>
-            </div>
-            <div class="champion-bar">
-                <img class="champion-bar-icon" src="{% static 'champion/images/shield.png' %}" alt="Defense" title="Defense" />
-                <div class="progress">
-                    <div class="champion-defense progress-bar" title="Defense" style="width: {{ champion_data.info.defense|mul:10 }}%">{{ champion_data.info.defense }}</div>
-                </div>
-            </div>
-            <div class="champion-bar">
-                <img class="champion-bar-icon" src="{% static 'champion/images/flame.png' %}" alt="Magic" title="Magic" />
-                <div class="progress">
-                    <div class="champion-magic progress-bar" title="Magic" style="width: {{ champion_data.info.magic|mul:10 }}%">{{ champion_data.info.magic }}</div>
-                </div>
-            </div>
-            <div class="champion-bar">
-                <img class="champion-bar-icon" src="{% static 'champion/images/stairs.png' %}" alt="Difficulty" title="Difficulty" />
-                <div class="progress">
-                    <div class="champion-difficulty progress-bar" title="Difficulty" style="width: {{ champion_data.info.difficulty|mul:10 }}%">{{ champion_data.info.difficulty }}</div>
-                </div>
-            </div>
         </div>
     </div>
+    <!-- top end -->
+    <!-- middle start -->
+    <div class="champion-middle">
+        <div class="champion-left">
+            <div class="champion-bars">
+                <span class="champion-bar-title">QUICK STATS</span>
+                {% for key, value in champion_data.info.items %}
+                    <div class="champion-bar">
+                        <img class="champion-bar-icon" src="{% static 'champion/images/' %}{{ key }}.png" alt="{{ key|upper }}" title="{{ key|upper }}" />
+                        <div class="progress champion-info-bar" title="{{ key|upper }}">
+                            <div class="champion-{{ key }} progress-bar" title="{{ key|upper }}" style="width: {{ value|mul:10 }}%">
+                                {{ value }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="champion-right">
+
+        </div>
+    </div>
+    <!-- middle end -->
 </div>
 {% endblock %}

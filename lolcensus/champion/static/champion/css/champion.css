@@ -64,20 +64,46 @@ ul {
     border: 4px solid #fbc02d;
 }
 
-.champion-basics {
+.champion-right {
     flex: 2;
     padding: 20px 10px 20px 20px;
 }
 
+.champion-left {
+    flex: 1;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
 .champion-bar {
     cursor: crosshair;
-    margin: 0 0 5px 70px;
+    margin: 10px 0 5px 0;
+}
+
+.champion-bars {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin: 20px 0 0 5px;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
 }
 
 .champion-bar-icon {
     float: left;
     height: 40px;
-    margin-right: 2px;
+    margin-right: 3px;
+}
+
+.champion-info-bar {
+    background: black;
+    font-size: 1.0rem;
+    height: 40px;
+}
+
+.champion-bar-title {
+    font-weight: 800;
+    text-decoration: underline;
 }
 
 .champion-attack {
@@ -104,8 +130,6 @@ ul {
 .champion-img-large {
     -webkit-filter: contrast(120%) brightness(120%);
     filter: contrast(120%) brightness(120%);
-    flex: 1;
-    margin-top: 10px;
 }
 
 .champion-img-large:hover {
@@ -160,6 +184,10 @@ ul {
     display: flex;
 }
 
+.champion-middle {
+    display: flex;
+}
+
 .dark-line {
     color: rgba(50, 50, 50, 0.4);
     font-weight: 800;
@@ -210,7 +238,7 @@ ul {
     flex: 1;
     font-weight: 600;
     margin: 0 auto 0 auto;
-    padding: 5px;
+    padding: 5px 0 100px 0;
     height: fit-content;
     width: 100%;
 }
@@ -249,13 +277,6 @@ ul {
     margin-top: -20px;
     position: absolute;
     right: 10px;
-}
-
-.progress {
-    background: black;
-    font-size: 1.0rem;
-    height: 40px;
-    width: 350px;
 }
 
 .riot-disclaimer {
