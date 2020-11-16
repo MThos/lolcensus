@@ -29,7 +29,7 @@
             <!-- start header -->
             {% block header %}
             <div class="header">
-                <img class="header-img" src="{% static 'champion/images/league-char-logo.png' %}"  alt="header image"/>
+                <img class="header-img" src="{% static 'champion/images/league-char-logo-2.png' %}"  alt="header image"/>
                 <div class="nav-bar">
                     <a class="nav-link" href="/champion">CHAMPIONS</a>
                     <a class="nav-link" href="#">SUMMONERS</a>
@@ -93,5 +93,10 @@
             <!-- end footer -->
         </div>
         <!-- end wrapper -->
+        <!-- start modals -->
+        {% include 'champion/terms.html' %}
+        {% include 'champion/privacy.html' %}
+        {% include 'champion/contact.html' %}
+        <!-- end modals -->
     </body>
 </html>
