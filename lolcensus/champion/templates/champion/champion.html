@@ -94,16 +94,31 @@
                 {% endfor %}
             </div>
             <div class="champion-tips">
-                <div class="ally-tips">
-
+                <span class="champion-tips-title">BEGINNER TIPS</span>
+                <div class="champion-tips-ally">
+                    <span class="champion-tips-ally-title">TIPS FOR PLAYING {{ champion_name|upper }}</span>
+                    {% for value in champion_data.allytips %}
+                        <div class="champion-tip-ally">
+                            <ul>
+                                <li>{{ value }}</li>
+                            </ul>
+                        </div>
+                    {% endfor %}
                 </div>
-                <div class="enemy-tips">
-
+                <div class="champion-tips-enemy">
+                <span class="champion-tips-enemy-title">TIPS FOR FIGHTING {{ champion_name|upper }}</span>
+                    {% for value in champion_data.enemytips %}
+                        <div class="champion-tip-enemy">
+                            <ul>
+                                <li>{{ value }}</li>
+                            </ul>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
         <!-- right side end -->
     </div>
-    <!-- champion-container start -->
+    <!-- champion-container end -->
 </div>
 {% endblock %}
