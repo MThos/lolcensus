@@ -107,7 +107,6 @@ ul {
 
 .champion-bar-title {
     font-weight: 800;
-    text-decoration: underline;
 }
 
 .champion-attack {
@@ -138,7 +137,6 @@ ul {
 .champion-base-stats-title {
     display: block;
     font-weight: 800;
-    text-decoration: underline;
     margin-bottom: 10px;
 }
 
@@ -210,6 +208,13 @@ ul {
     text-transform: uppercase;
 }
 
+.champion-passive {
+    background: rgba(14, 14, 14, 1.0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0;
+    padding: 10px 10px 0 10px;
+}
+
 .champion-resource {
     background: rgba(12, 12, 12, 1);
     background: black;
@@ -229,7 +234,6 @@ ul {
 
 .champion-resource-title {
     font-weight: 800;
-    text-decoration: underline;
 }
 
 .champion-spells {
@@ -242,22 +246,14 @@ ul {
     display: block;
     font-weight: 800;
     margin: 2px 0 10px 0;
-    text-decoration: underline;
     text-align: center;
 }
 
 .champion-spell {
-    background: rgba(14, 14, 14, 1.0);
+    background: rgba(14, 14, 14, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 0 20px 0;
     padding: 10px;
-}
-
-.champion-passive {
-    background: rgba(14, 14, 14, 1.0);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0;
-    padding: 10px 10px 0 10px;
 }
 
 .champion-spell-bottom {
@@ -371,7 +367,6 @@ ul {
     display: block;
     font-weight: 800;
     margin: 2px 0 10px 0;
-    text-decoration: underline;
     text-align: center;
 }
 
@@ -382,8 +377,7 @@ ul {
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.5rem;
     font-weight: 800;
-    margin-bottom: 10px;
-    padding: 2px 0 7px 0;
+    padding: 2px 0 10px 0;
 }
 
 .dark-line {
