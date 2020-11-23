@@ -92,11 +92,34 @@
                         </div>
                     </div>
                 {% endfor %}
+                <div class="champion-passive">
+                    <div class="champion-spell-top">
+                        <div class="champion-spell-key">
+                            PASSIVE
+                        </div>
+                        <div class="champion-spell-name">
+                            {{ champion_data.passive.name|upper|slash_to_breakline }}
+                        </div>
+                    </div>
+                    <div class="champion-spell-middle">
+                        <div class="champion-spell-image">
+                            <img src="{% static 'champion/ddragon/dragontail-10.2.1/10.2.1/img/passive' %}/{{ champion_data.passive.image.full }}" alt="{{ champion_data.passive.image.full }}"/>
+                        </div>
+                        <div class="champion-spell-desc">
+                            {% autoescape off %}
+                                {{ champion_data.passive.description }}
+                            {% endautoescape %}
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="champion-tips">
                 <span class="champion-tips-title">BEGINNER TIPS</span>
                 <div class="champion-tips-ally">
-                    <span class="champion-tips-ally-title">TIPS FOR PLAYING {{ champion_name|upper }}</span>
+                    <div class="champion-tip-icon">
+                        <img src="{% static 'champion/images/checkmark.png' %}" alt="checkmark icon"/>
+                    </div>
+                    <span class="champion-tips-ally-title">TIPS FOR 'PLAYING' {{ champion_name|upper }}</span>
                     {% for value in champion_data.allytips %}
                         <div class="champion-tip-ally">
                             <ul>
@@ -106,7 +129,10 @@
                     {% endfor %}
                 </div>
                 <div class="champion-tips-enemy">
-                <span class="champion-tips-enemy-title">TIPS FOR FIGHTING {{ champion_name|upper }}</span>
+                    <div class="champion-tip-icon">
+                        <img src="{% static 'champion/images/checkmark.png' %}" alt="checkmark icon"/>
+                    </div>
+                    <span class="champion-tips-enemy-title">TIPS FOR 'FIGHTING' {{ champion_name|upper }}</span>
                     {% for value in champion_data.enemytips %}
                         <div class="champion-tip-enemy">
                             <ul>
