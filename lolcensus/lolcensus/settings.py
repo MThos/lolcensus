@@ -41,8 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mathfilters',
     'django_cassiopeia',
-    'champion',
+    'core',
 ]
+
+# Patch Version
+PATCH_VERSION = "10.2.1"
+
 
 CASSIOPEIA_RIOT_API_KEY = env('RIOT_API_KEY')  # api key in env var
 CASSIOPEIA_DEFAULT_REGION = "NA"  # default region
