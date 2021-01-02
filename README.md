@@ -32,7 +32,7 @@ LEAGUE CENSUS is released under the [GNU General Public License](https://github.
 
 **Copyright**
 
-Copyright © 2020 - LEAGUECENSUS.COM
+Copyright © 2021 - LEAGUECENSUS.COM
 
 
 ## Legal Mumbo Jumbo:
