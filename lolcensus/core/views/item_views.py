@@ -15,6 +15,8 @@ def item_list(request):
         row = item_json_dump['data'][key]
         item_names_images[row['name']] = row['image']['full']
 
+    # print(item_names_images)
+
     return render(request, "item/index.html", {
         "year": get_year(),
         "get_current_language": get_language(),
@@ -24,12 +26,12 @@ def item_list(request):
     })
 
 
-def item(request, item_name):
-    data = open(os.path.join(settings.BASE_DIR, 'core/static/core/ddragon/dragontail-' + get_patch() + '/' + get_patch() + '/data/en_us/item/' + item_name + '.json')).read()
+def item(request, item_id):
+    data = open(os.path.join(settings.BASE_DIR, 'core/static/core/ddragon/dragontail-' + get_patch() + '/' + get_patch() + '/data/en_us/item.json')).read()
     item_json_dump = json.loads(data)
 
     item_data = {}
-    for key, value in item_json_dump['data'][item_name].items():
+    for key, value in item_json_dump['data'][item_id].items():
         item_data[key] = [value][0]
 
     # print(item_data)
@@ -39,7 +41,7 @@ def item(request, item_name):
         "get_current_language": get_language(),
         "tab_title": "League Census",
         "item_data": item_data,
-        "item_name": item_name,
+        "item_id": item_id,
         "patch": get_patch(),
     })
 

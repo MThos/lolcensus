@@ -3,13 +3,21 @@
 {% load mathfilters %}
 {% load custom_tags %}
 
+{% block css %}
+    <link href="{% static 'champion/css/champion.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'champion/js/champion.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <div id="main-section">
     <!-- champion-container start -->
     <div id="champion-container">
         <!-- left side start -->
         <div id="champion-left">
-            <img id="champion-img-large" src="{% static 'core/ddragon/dragontail-10.2.1/img/champion/loading' %}/{{ champion_name }}_0.jpg" alt="{{ champion_name }}"/>
+            <img id="champion-img-large" src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/img/champion/loading/{{ champion_name }}_0.jpg" alt="{{ champion_name }}"/>
             <div id="champion-bars">
                 <span class="champion-bar-title">QUICK STATS</span>
                 {% for key, value in champion_data.info.items %}
@@ -35,9 +43,9 @@
                 <span class="champion-base-stats-title">BASE STATS</span>
                 {% for key, value in stats.items %}
                     <div class="champion-base-stat-flex">
-                    <div class="champion-base-stat gold">{{ key}}</div>
-                    <div class="champion-base-stat">{{ value }}</div>
-                </div>
+                        <div class="champion-base-stat gold">{{ key}}</div>
+                        <div class="champion-base-stat">{{ value }}</div>
+                    </div>
                 {% endfor %}
             </div>
         </div>
@@ -76,7 +84,7 @@
                         </div>
                         <div class="champion-spell-middle">
                             <div class="champion-spell-image">
-                                <img src="{% static 'core/ddragon/dragontail-10.2.1/10.2.1/img/spell' %}/{{ key.image.full }}" alt="{{ key.image.full }}"/>
+                                <img src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/{{ patch }}/img/spell/{{ key.image.full }}" alt="{{ key.image.full }}"/>
                             </div>
                             <div class="champion-spell-desc">
                                 {% autoescape off %}
@@ -103,7 +111,7 @@
                     </div>
                     <div class="champion-spell-middle">
                         <div class="champion-spell-image">
-                            <img src="{% static 'core/ddragon/dragontail-10.2.1/10.2.1/img/passive' %}/{{ champion_data.passive.image.full }}" alt="{{ champion_data.passive.image.full }}"/>
+                            <img src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/{{ patch }}/img/passive/{{ champion_data.passive.image.full }}" alt="{{ champion_data.passive.image.full }}"/>
                         </div>
                         <div class="champion-spell-desc">
                             {% autoescape off %}

@@ -1,17 +1,25 @@
 {% extends "core/base.html" %}
 {% load static %}
 
+{% block css %}
+    <link href="{% static 'champion/css/champion.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'champion/js/champion.js' %}"></script>
+{% endblock %}
+
 {% block content %}
-<div id="main-section">
-    <div id="champion-list">
-        {% for name, image in champion_names_images.items %}
-            <div class="champion">
-                <a href="/champion/{{ name }}" id="{{ name }}">
-                    <img class="champion-list-img" src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/{{ patch }}/img/champion/{{ image }}" alt="{{ name }}"/>
-                    <p class="champion-list-name">{{ name }}</p>
-                </a>
-            </div>
-        {% endfor %}
+    <div id="main-section">
+        <div id="champion-list">
+            {% for name, image in champion_names_images.items %}
+                <div class="champion">
+                    <a href="/champion/{{ name }}" id="{{ name }}">
+                        <img class="champion-list-img" src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/{{ patch }}/img/champion/{{ image }}" alt="{{ name }}"/>
+                        <p class="champion-list-name">{{ name }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-</div>
 {% endblock %}

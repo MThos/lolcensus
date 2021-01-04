@@ -1,14 +1,22 @@
 {% extends "core/base.html" %}
 {% load static %}
 
+{% block css %}
+    <link href="{% static 'item/css/item.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'item/js/item.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <div id="main-section">
-    <div id="champion-list">
+    <div id="item-list">
         {% for name, image in item_names_images.items %}
-            <div class="champion">
-                <a href="/champion/{{ name }}" id="{{ name }}">
-                    <img class="champion-list-img" src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/{{ patch }}/img/item/{{ image }}" alt="{{ name }}"/>
-                    <p class="champion-list-name">{{ name }}</p>
+            <div class="item">
+                <a href="/item/{{ image|slice:"0:4" }}" id="{{ name }}">
+                    <img class="item-list-img" src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/{{ patch }}/img/item/{{ image }}" alt="{{ name }}"/>
+                    <p class="item-list-name">{{ name }}</p>
                 </a>
             </div>
         {% endfor %}
