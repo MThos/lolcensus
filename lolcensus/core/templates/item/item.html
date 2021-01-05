@@ -18,13 +18,15 @@
             <!-- left side start -->
             <div id="item-left">
                 <img id="item-img-large" src="{% static 'core' %}/ddragon/dragontail-{{ patch }}/{{ patch }}/img/item/{{ item_id }}.png" alt="{{ item_data.name }}"/>
-                <div id="item-base-stats">
-                    <span class="item-base-stats-title">BASE STATS</span>
-                    {% for key, value in stats.items %}
-                        <div class="item-base-stat-flex">
-                            <div class="item-base-stat gold">{{ key}}</div>
-                            <div class="item-base-stat">{{ value }}</div>
+                <div id="item-cost">
+                    <span class="item-cost-title">ITEM COSTS</span>
+                    {% for key, value in item_data.gold.items %}
+                        {% if key != 'purchasable' %}
+                            <div class="item-cost-flex">
+                            <div class="item-cost gold">{{ key|upper }}</div>
+                            <div class="item-cost">{{ value }}</div>
                         </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -33,7 +35,6 @@
             <div id="item-right">
                 <div id="patch">v{{ patch }}</div>
                 <div id="item-name">{{ item_data.name }}</div>
-                <div id="item-cost">{{ item_data.gold.total }}g</div>
                 <div id="item-tags">
                     {% for value in item_data.tags %}
                         <div class="item-tag">[{{ value|space_after_capital }}]</div>
