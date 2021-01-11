@@ -5,9 +5,13 @@
     text-align: center;
 }
 
-.item:hover {
-    background: #141414;
-    border: 4px solid #fbc02d;
+#item-basic-description {
+    margin: 45px 0 35px 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 650px;
 }
 
 #item-container {
@@ -28,7 +32,7 @@
 #item-cost {
     background: black;
     border: 2px solid rgba(255, 255, 255, 0.1);
-    margin: 30px 0 30px 3px;
+    margin: 31px 0 30px 3px;
     padding: 10px;
     text-align: center;
     width: 300px;
@@ -64,16 +68,23 @@
 }
 
 .item-list-img {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     margin-top: 20px;
     width: 100px;
 }
 
+.item-list-img:hover {
+    background: #141414;
+    border: 2px solid #fbc02d;
+}
+
 #item-img-large {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 40px;
-    width: 100px;
+    margin-top: 10px;
+    margin-left: 92px;
+    width: 120px;
     -webkit-filter: contrast(120%) brightness(120%);
     filter: contrast(120%) brightness(120%);
 }
@@ -98,26 +109,87 @@
     text-transform: uppercase;
 }
 
-#item-lore {
-    margin: 25px 0 40px 0;
-    height: 407px;
-}
-
 #item-name {
     color: #fbc02d;
     font-size: 3.0rem;
     font-family: 'Shadows Into Light', cursive;
     font-weight: 800;
-    margin: 10px 0 10px 0;
+    margin: 20px 0 10px 0;
     text-align: center;
     text-transform: uppercase;
 }
 
+#item-stats {
+    background: black;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#item-stats-description {
+    margin: 25px 20px 10px 15px;
+    text-align: left;
+}
+
+#item-stats-inner {
+    background: rgba(14, 14, 14, 1.0);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+#item-stats-icon {
+    float: right;
+}
+
+#item-stats-icon > img {
+    width: 30px;
+}
+
+#item-stats-title {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fbc02d;
+    display: block;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 2px 0 10px 0;
+}
+
 .item-tag {
-    display: inline;
+    display: block;
 }
 
 #item-tags {
-    margin-top: 20px;
-    text-align: center;
+    background: black;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+#item-tags-list {
+    margin: 25px 20px 10px 15px;
+    text-align: left;
+}
+
+#item-tags-inner {
+    background: rgba(14, 14, 14, 1.0);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+#item-tags-icon {
+    float: right;
+}
+
+#item-tags-icon > img {
+    width: 30px;
+}
+
+#item-tags-title {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fbc02d;
+    display: block;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 2px 0 10px 0;
 }

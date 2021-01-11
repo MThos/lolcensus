@@ -5,11 +5,6 @@
     text-align: center;
 }
 
-.champion:hover {
-    background: #141414;
-    border: 4px solid #fbc02d;
-}
-
 #champion-container {
     display: flex;
 }
@@ -109,10 +104,14 @@
 }
 
 .champion-list-img {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     margin-top: 20px;
     width: 100px;
+}
+
+.champion-list-img:hover {
+    border: 2px solid #fbc02d;
 }
 
 #champion-img-large {

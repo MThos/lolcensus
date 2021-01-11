@@ -24,23 +24,51 @@
                         {% if key != 'purchasable' %}
                             <div class="item-cost-flex">
                             <div class="item-cost gold">{{ key|upper }}</div>
-                            <div class="item-cost">{{ value }}</div>
+                            <div class="item-cost">{{ value }}g</div>
                         </div>
                         {% endif %}
                     {% endfor %}
                 </div>
-            </div>
+                <div id="item-cost">
+                        <span class="item-cost-title">MAPS ALLOWED</span>
+                        {% for key, value in item_data.gold.items %}
+                            {% if key != 'purchasable' %}
+                                <div class="item-cost-flex">
+                                <div class="item-cost gold">{{ key|upper }}</div>
+                                <div class="item-cost">{{ value }}g</div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
             <!-- left side end -->
             <!-- right side start -->
             <div id="item-right">
                 <div id="patch">v{{ patch }}</div>
-                <div id="item-name">{{ item_data.name }}</div>
+                <div id="item-name">{{ item_data.name|breakline_at_bracket|linebreaks }}</div>
+                <div id="item-basic-description">{{ item_data.plaintext }}</div>
                 <div id="item-tags">
-                    {% for value in item_data.tags %}
-                        <div class="item-tag">[{{ value|space_after_capital }}]</div>
-                    {% endfor %}
+                    <div id="item-tags-inner">
+                        <div id="item-tags-icon">
+                            <img src="{% static 'core/images/checkmark.png' %}" alt="checkmark icon"/>
+                        </div>
+                        <span id="item-tags-title">ITEM AFFECTS</span>
+                        <div id="item-tags-list">
+                            {% for value in item_data.tags %}
+                                <div class="item-tag">&#9632; {{ value|space_after_capital }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
-                <div id="item-lore">"{{ item_data.lore }}"</div>
+                <div id="item-stats">
+                    <div id="item-stats-inner">
+                        <div id="item-stats-icon">
+                            <img src="{% static 'core/images/checkmark.png' %}" alt="checkmark icon"/>
+                        </div>
+                        <span id="item-stats-title">STATISTICS</span>
+                        <div id="item-stats-description">{{ item_data.description|br_to_breakline|replace_tags|linebreaks }}</div>
+                    </div>
+                </div>
             </div>
             <!-- right side end -->
         </div>
