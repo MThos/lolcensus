@@ -96,7 +96,7 @@
 }
 
 .champion-base-stat-flex:nth-child(odd) {
-    background: rgba(60, 60, 60, 0.3);
+    background: rgba(60, 60, 60, 0.2);
 }
 
 .champion-base-stat-flex:nth-child(even) {

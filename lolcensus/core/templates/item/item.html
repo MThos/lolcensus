@@ -23,21 +23,18 @@
                     {% for key, value in item_data.gold.items %}
                         {% if key != 'purchasable' %}
                             <div class="item-cost-flex">
-                            <div class="item-cost gold">{{ key|upper }}</div>
-                            <div class="item-cost">{{ value }}g</div>
-                        </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-                <div id="item-cost">
-                        <span class="item-cost-title">MAPS ALLOWED</span>
-                        {% for key, value in item_data.gold.items %}
-                            {% if key != 'purchasable' %}
-                                <div class="item-cost-flex">
                                 <div class="item-cost gold">{{ key|upper }}</div>
                                 <div class="item-cost">{{ value }}g</div>
                             </div>
-                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div id="item-maps">
+                        <span class="item-maps-title">MAPS ALLOWED</span>
+                        {% for value in map_data.mapName %}
+                            <div class="item-maps-flex">
+                                <div class="item-map">{{ value }}</div>
+                            </div>
                         {% endfor %}
                     </div>
                 </div>
@@ -52,10 +49,15 @@
                         <div id="item-tags-icon">
                             <img src="{% static 'core/images/checkmark.png' %}" alt="checkmark icon"/>
                         </div>
-                        <span id="item-tags-title">ITEM AFFECTS</span>
+                        <span id="item-tags-title">BENEFITS</span>
                         <div id="item-tags-list">
                             {% for value in item_data.tags %}
-                                <div class="item-tag">&#9632; {{ value|space_after_capital }}</div>
+                                {% if 'Movement' in value %}
+                                    <div class="item-tag">&#9632; {{ 'Movement Speed' }}</div>
+                                {% else %}
+                                    <div class="item-tag">&#9632; {{ value|space_after_capital }}</div>
+                                {% endif %}
+
                             {% endfor %}
                         </div>
                     </div>

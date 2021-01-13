@@ -6,12 +6,16 @@
 }
 
 #item-basic-description {
-    margin: 45px 0 35px 0;
-    text-align: center;
+    background: black;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 38px auto 28px auto;
     overflow: hidden;
+    padding: 5px 10px;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 650px;
+    width: fit-content;
+    max-width: 650px;
 }
 
 #item-container {
@@ -45,7 +49,8 @@
 }
 
 .item-cost {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    padding: 2px 0;
 }
 
 .item-cost-flex {
@@ -56,11 +61,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 5px;
-    padding: 2px 0;
+    padding: 5px 0;
 }
 
 .item-cost-flex:nth-child(odd) {
-    background: rgba(60, 60, 60, 0.3);
+    background: rgba(60, 60, 60, 0.2);
 }
 
 .item-cost-flex:nth-child(even) {
@@ -99,6 +104,45 @@
     flex-grow: 1;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+#item-maps {
+    background: black;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 31px 0 30px 3px;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.item-maps-title {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.item-map {
+    font-size: 1.1rem;
+    padding: 10px 0;
+}
+
+.item-maps-flex {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    padding: 2px 0;
+}
+
+.item-maps-flex:nth-child(odd) {
+    background: rgba(60, 60, 60, 0.2);
+}
+
+.item-maps-flex:nth-child(even) {
+    background: rgba(60, 60, 60, 0.1);
 }
 
 .item-list-name {
