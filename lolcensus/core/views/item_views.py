@@ -4,18 +4,19 @@ import os
 from django.utils import translation
 from django.shortcuts import render
 from django.conf import settings
+from collections import OrderedDict
 
 
 def item_list(request):
     data = open(os.path.join(settings.BASE_DIR, 'core/static/core/ddragon/dragontail-' + get_patch() + '/' + get_patch() + '/data/en_us/item.json')).read()
     item_json_dump = json.loads(data)
 
-    item_names_images = {}
+    item_names_images_unsort = {}
     for key in item_json_dump['data']:
         row = item_json_dump['data'][key]
-        item_names_images[row['name']] = row['image']['full']
+        item_names_images_unsort[row['name']] = row['image']['full']
 
-    # print(item_names_images)
+    item_names_images = OrderedDict(sorted(item_names_images_unsort.items()))
 
     return render(request, "item/index.html", {
         "year": get_year(),
@@ -38,8 +39,6 @@ def item(request, item_id):
     for key, value in item_json_dump['data'][item_id]['maps'].items():
         if value:
             map_data['mapName'].append(get_map_details(key))
-
-    print(map_data)
 
     return render(request, "item/item.html", {
         "year": get_year(),
