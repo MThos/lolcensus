@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mathfilters',
     'django_cassiopeia',
     'core',
+    'environ',
 ]
 
 # Patch Version
