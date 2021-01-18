@@ -4,9 +4,14 @@ import os
 from django.utils import translation
 from django.shortcuts import render
 from django.conf import settings
+from django.core.cache.backends.base import DEFAULT_TIMEOUT
+from django.views.decorators.cache import cache_page
 from collections import OrderedDict
 
+CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
+
+@cache_page(CACHE_TTL)
 def item_list(request):
     data = open(os.path.join(settings.BASE_DIR, 'core/static/core/ddragon/dragontail-' + get_patch() + '/' + get_patch() + '/data/en_us/item.json')).read()
     item_json_dump = json.loads(data)
@@ -27,6 +32,7 @@ def item_list(request):
     })
 
 
+@cache_page(CACHE_TTL)
 def item(request, item_id):
     data = open(os.path.join(settings.BASE_DIR, 'core/static/core/ddragon/dragontail-' + get_patch() + '/' + get_patch() + '/data/en_us/item.json')).read()
     item_json_dump = json.loads(data)

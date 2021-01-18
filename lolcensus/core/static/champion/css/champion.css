@@ -104,14 +104,14 @@
 }
 
 .champion-list-img {
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #fbc02d;
     border-radius: 40px;
     margin-top: 20px;
     width: 100px;
 }
 
 .champion-list-img:hover {
-    border: 2px solid #fbc02d;
+    border: 2px solid white;
 }
 
 #champion-img-large {
