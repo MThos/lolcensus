@@ -12,7 +12,7 @@ This application also makes use of Cassiopeia Library, written by **Meraki Analy
 [LEAGUECENSUS.COM](https://leaguecensus.com)
 
 
-# TECHNICAL SPECIFICATIONS
+## Technical Specifications
 * Django
 * Python
 * MongoDB
