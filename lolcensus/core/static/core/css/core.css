@@ -120,7 +120,7 @@ ul {
     flex-direction: row;
     font-size: 1.2rem;
     padding: 5px 10px;
-    width: 100%
+    width: 100%;
 }
 
 .nav-link {
@@ -174,4 +174,56 @@ ul {
     margin: 0 auto;
     min-height: 100vh;
     max-width: 1024px;
+}
+
+@media only screen and (max-width: 600px) {
+    html, body {
+        font-size: 1.0rem;
+    }
+    #footer {
+        display: inline;
+        font-size: 1.0rem;
+    }
+
+    #footer-bottom .dark-line {
+        color: transparent;
+        display: block;
+        margin: -15px;
+    }
+
+    #header-img {
+        display: none;
+    }
+
+    #main-section {
+        padding: 5px 0 10px 0;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        font-size: 0.9rem;
+        padding: 2px 2px;
+    }
+
+    .nav-link {
+        border: 2px solid #080808;
+        color: #080808;
+        margin: 0;
+        padding: 5px;
+    }
+
+    #riot-disclaimer {
+        margin-top: 10px;
+        line-height: 1.4rem;
+    }
+
+    #sitemap {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #sitemap-left, #sitemap-center, #sitemap-right {
+        flex: 1;
+    }
 }
