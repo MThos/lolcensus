@@ -107,7 +107,7 @@
     border: 2px solid #fbc02d;
     border-radius: 40px;
     margin-top: 20px;
-    width: 100px;
+    width: 120px;
 }
 
 .champion-list-img:hover {
@@ -324,4 +324,67 @@
     font-size: 1.5rem;
     font-weight: 800;
     padding: 2px 0 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .champion {
+        flex: 1 0 33%;
+    }
+
+    #champion-bars {
+        margin: -10px auto 30px auto;
+    }
+
+    #champion-base-stats {
+        margin: 30px auto;
+    }
+
+    #champion-img-large {
+        display: none;
+    }
+
+    .champion-spell-key {
+        display: none;
+    }
+
+    .champion-list-img {
+        border-radius: 30px;
+        width: 70px;
+    }
+
+    .champion-list-name {
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 0.9rem;
+        font-weight: 800;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+
+    #champion-lore {
+        margin: 25px auto 50px auto;
+        padding: 20px;
+        height: fit-content;
+    }
+
+    #champion-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #champion-right {
+        flex: 1;
+        order: 1;
+        padding: 20px 5px 20px 5px;
+    }
+
+    #champion-left {
+        flex: 1;
+        margin-top: 10px;
+        order: 2;
+        padding-left: 10px;
+    }
+
+    #champion-resource {
+        margin: 30px auto;
+    }
 }

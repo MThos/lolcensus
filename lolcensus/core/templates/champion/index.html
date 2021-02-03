@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %}
-    <link href="{% static 'champion/css/champion.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'champion/css/champion.css' %}?{{ css_timestamp }}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block js %}

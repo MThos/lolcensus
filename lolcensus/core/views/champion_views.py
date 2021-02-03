@@ -1,17 +1,18 @@
 import datetime
 import json
 import os
-from django.utils import translation
-from django.shortcuts import render
 from django.conf import settings
 from django.core.cache.backends.base import DEFAULT_TIMEOUT
+from django.shortcuts import render
+from django.utils import translation
 from django.views.decorators.cache import cache_page
+
 # from cassiopeia import Champion, Champions
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
-@cache_page(CACHE_TTL)
+# @cache_page(CACHE_TTL)
 def champion_list(request):
     data = open(os.path.join(settings.BASE_DIR, 'core/static/core/ddragon/dragontail-' + get_patch() + '/' + get_patch() + '/data/en_us/champion.json')).read()
     champion_json_dump = json.loads(data)
@@ -30,7 +31,7 @@ def champion_list(request):
     })
 
 
-@cache_page(CACHE_TTL)
+# @cache_page(CACHE_TTL)
 def champion(request, champion_name):
     champion_name = name_check(champion_name)
     data = open(os.path.join(settings.BASE_DIR, 'core/static/core/ddragon/dragontail-' + get_patch() + '/' + get_patch() + '/data/en_us/champion/' + champion_name + '.json')).read()
@@ -69,7 +70,7 @@ def champion(request, champion_name):
         "stats": new_stats,
         "patch": get_patch(),
         "resource_bg": resource_bg,
-        "resource_color": resource_color
+        "resource_color": resource_color,
     })
 
 
