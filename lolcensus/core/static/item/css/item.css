@@ -231,3 +231,61 @@
     font-weight: 800;
     padding: 2px 0 10px 0;
 }
+
+@media only screen and (max-width: 600px) {
+    .item {
+        flex: 1 0 33%;
+    }
+
+    #item-img-large {
+        display: none;
+    }
+
+    .item-list-img {
+        border-radius: 30px;
+        width: 70px;
+    }
+
+    .item-list-name {
+        font-size: 0.9rem;
+    }
+
+    #item-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #item-cost {
+        margin: 0 auto 30px auto;
+    }
+
+    #item-right {
+        flex: 1;
+        order: 1;
+        padding: 20px 5px 20px 5px;
+    }
+
+    #item-left {
+        flex: 1;
+        margin-top: 10px;
+        order: 2;
+        padding-left: 0;
+    }
+
+    #item-maps {
+        margin: 30px auto;
+    }
+
+    #item-name {
+        line-height: 50px;
+        margin-top: 0;
+    }
+
+    #patch {
+        margin-top: -25px;
+    }
+
+    #item-stats {
+        margin: 30px auto 0 auto;
+    }
+}

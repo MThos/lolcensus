@@ -332,11 +332,11 @@
     }
 
     #champion-bars {
-        margin: -10px auto 30px auto;
+        margin: 0 auto 30px auto;
     }
 
     #champion-base-stats {
-        margin: 30px auto;
+        margin: 30px auto 30px auto;
     }
 
     #champion-img-large {
@@ -353,15 +353,11 @@
     }
 
     .champion-list-name {
-        font-family: 'Shadows Into Light', cursive;
         font-size: 0.9rem;
-        font-weight: 800;
-        margin-top: 10px;
-        text-transform: uppercase;
     }
 
     #champion-lore {
-        margin: 25px auto 50px auto;
+        margin: 25px auto 30px auto;
         padding: 20px;
         height: fit-content;
     }
@@ -381,10 +377,18 @@
         flex: 1;
         margin-top: 10px;
         order: 2;
-        padding-left: 10px;
+        padding-left: 0;
     }
 
     #champion-resource {
-        margin: 30px auto;
+        margin: 30px auto 30px auto;
+    }
+
+    #champion-tips {
+        margin: 30px auto 0 auto;
+    }
+
+    #patch {
+        margin-top: -25px;
     }
 }

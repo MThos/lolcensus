@@ -100,6 +100,37 @@ ul {
     margin: 0 20px;
 }
 
+#legal-container {
+    padding: 25px;
+}
+
+#legal-title {
+    color: #fbc02d;
+    font-family: 'Shadows Into Light', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+#legal-date {
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+.legal-sub-title {
+    color: #fbc02d;
+    font-family: 'Shadows Into Light', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin: 60px 0 10px 0;
+}
+
+.legal-content {
+    margin-bottom: 10px;
+}
+
 #main-section {
     background: #080808;
     border: 2px solid black;
@@ -195,19 +226,21 @@ ul {
         display: none;
     }
 
+    #legal-container {
+        padding: 10px;
+    }
+
     #main-section {
         padding: 5px 0 10px 0;
     }
 
     .nav-bar {
         flex-direction: column;
-        font-size: 0.9rem;
+        font-size: 1.0rem;
         padding: 2px 2px;
     }
 
     .nav-link {
-        border: 2px solid #080808;
-        color: #080808;
         margin: 0;
         padding: 5px;
     }
