@@ -1,3 +1,7 @@
+p {
+    margin-top: 5px;
+}
+
 .item {
     border: 4px solid transparent;
     display: block;
@@ -6,16 +10,10 @@
 }
 
 #item-basic-description {
-    background: black;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    margin: 38px auto 28px auto;
-    overflow: hidden;
-    padding: 5px 10px;
+    margin: 45px auto 28px auto;
     text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: fit-content;
-    max-width: 650px;
+    width: 630px;
+    max-width: 630px;
 }
 
 #item-container {
@@ -24,12 +22,12 @@
 
 #item-right {
     flex: 2;
-    padding: 20px 15px 20px 5px;
+    padding: 20px 10px 20px 10px;
 }
 
 #item-left {
     flex: 1;
-    margin-top: 10px;
+    margin-top: 30px;
     padding-left: 10px;
 }
 
@@ -86,8 +84,8 @@
 #item-img-large {
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 40px;
-    margin-top: 10px;
-    margin-left: 92px;
+    display: block;
+    margin: 0 auto;
     width: 120px;
     -webkit-filter: contrast(120%) brightness(120%);
     filter: contrast(120%) brightness(120%);
@@ -152,7 +150,8 @@
     font-size: 3.0rem;
     font-family: 'Shadows Into Light', cursive;
     font-weight: 800;
-    margin: 20px 0 10px 0;
+    line-height: 55px;
+    margin: 10px 0 10px 0;
     text-align: center;
     text-transform: uppercase;
 }
@@ -234,12 +233,28 @@
 
 @media only screen and (max-width: 600px) {
     .item {
-        flex: 1 0 33%;
+        flex: 1 0 30%;
+    }
+
+    #item-basic-description {
+        width: 330px;
+        max-width: 330px;
+    }
+
+    #item-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    #item-cost {
+        margin: 0 auto 30px auto;
     }
 
     #item-img-large {
         display: none;
     }
+
 
     .item-list-img {
         border-radius: 30px;
@@ -248,15 +263,6 @@
 
     .item-list-name {
         font-size: 0.9rem;
-    }
-
-    #item-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #item-cost {
-        margin: 0 auto 30px auto;
     }
 
     #item-right {

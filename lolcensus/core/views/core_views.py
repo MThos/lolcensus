@@ -9,7 +9,7 @@ from django.views.decorators.cache import cache_page
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
-# @cache_page(CACHE_TTL)
+@cache_page(CACHE_TTL)
 def terms(request):
     return render(request, "core/terms.html", {
         "year": get_year(),
@@ -18,7 +18,7 @@ def terms(request):
     })
 
 
-# @cache_page(CACHE_TTL)
+@cache_page(CACHE_TTL)
 def privacy(request):
     return render(request, "core/privacy.html", {
         "year": get_year(),

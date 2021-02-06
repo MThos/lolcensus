@@ -24,7 +24,7 @@
                     <div class="champion-bar">
                         <img class="champion-bar-icon" src="{% static 'champion/images/' %}{{ key }}.png" alt="{{ key|upper }}" title="{{ key|upper }}" />
                         <div class="progress champion-info-bar" title="{{ key|upper }}">
-                            <div class="champion-{{ key }} progress-bar" title="{{ key|upper }}" style="width: {{ value|mul:10 }}%">
+                            <div class="champion-{{ key }} champion-progress-bar" title="{{ key|upper }}" style="width: {{ value|mul:10 }}%">
                                 {{ value }}
                             </div>
                         </div>
@@ -34,7 +34,7 @@
             <div id="champion-resource">
                 <span class="champion-resource-title">RESOURCE</span>
                 <div class="progress champion-resource-bar" title="{{ champion_data.partype }}">
-                    <div class="progress-bar" title="{{ champion_data.partype }}" style="width: 100%; background: {{ resource_bg }}; color: {{ resource_color }}">
+                    <div class="champion-resource-progress-bar" title="{{ champion_data.partype }}" style="width: 100%; background: {{ resource_bg }}; color: {{ resource_color }}">
                         {{ champion_data.partype|upper }}
                     </div>
                 </div>

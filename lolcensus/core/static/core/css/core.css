@@ -1,3 +1,50 @@
+/* shadows-into-light-regular - latin */
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/shadows-into-light-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/shadows-into-light-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-200 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  src: local(''),
+       url('../fonts/nunito-v16-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v16-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-regular - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/nunito-v16-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v16-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-600 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/nunito-v16-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v16-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-800 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+       url('../fonts/nunito-v16-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v16-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html, body {
     background: #151515;
     color: #faf6ee;
@@ -8,6 +55,7 @@ html, body {
     line-height: 1.5rem;
     min-width: 100%;
     max-width: 1024px;
+    margin: 0;
 }
 
 a {
@@ -41,8 +89,7 @@ li > a:hover, a:focus, a:active {
 }
 
 ul {
-    padding-left: 10px;
-    margin-left: 10px;
+    padding-left: 0;
     list-style-type: square;
 }
 
@@ -54,26 +101,26 @@ ul {
 
 #footer {
     background: #080808;
-    border-top: 2px solid black;
+    border-top: 2px solid rgba(50, 50, 50, 0.2);
     bottom: 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.8rem;
     font-weight: 400;
-    line-height: 1.8rem;
+    line-height: 1.6rem;
     padding: 10px 0;
     text-transform: uppercase;
     width: 100%;
 }
 
 #footer-bottom {
-    padding: 0 20px;
+    padding: 0 15px;
     margin-top: 20px;
     text-align: left;
 }
 
 #footer > a {
     color: mediumseagreen;
-    font-size: 1rem;
+    font-size: 1.0rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
     outline: none !important;
@@ -96,8 +143,8 @@ ul {
 }
 
 .horizontal-line {
-    background: rgba(50, 50, 50, 0.4);
-    margin: 0 20px;
+    border-color: rgba(50, 50, 50, 0.2);
+    margin: 0 14px !important;
 }
 
 #legal-container {
@@ -133,8 +180,8 @@ ul {
 
 #main-section {
     background: #080808;
-    border: 2px solid black;
     color: rgba(255, 255, 255, 0.9);
+    display: flex;
     flex: 1;
     font-weight: 600;
     margin: 0 auto 0 auto;
@@ -151,7 +198,6 @@ ul {
     flex-direction: row;
     font-size: 1.2rem;
     padding: 5px 10px;
-    width: 100%;
 }
 
 .nav-link {
@@ -161,6 +207,7 @@ ul {
     flex: 1;
     justify-content: center;
     margin: 0 5px;
+    padding: 10px 0;
 }
 
 .nav-link:hover, .nav-link:active, .nav-link:focus {
@@ -181,7 +228,7 @@ ul {
 
 #riot-disclaimer {
     line-height: 1rem;
-    padding: 10px 20px;
+    padding: 10px 15px;
     text-align: left;
 }
 
@@ -189,6 +236,7 @@ ul {
     display: flex;
     flex-direction: row;
     text-align: left;
+    padding: 0 15px;
 }
 
 #sitemap-left, #sitemap-center, #sitemap-right {
@@ -211,6 +259,7 @@ ul {
     html, body {
         font-size: 1.0rem;
     }
+
     #footer {
         display: inline;
         font-size: 1.0rem;
@@ -227,7 +276,7 @@ ul {
     }
 
     #legal-container {
-        padding: 10px;
+        padding: 15px;
     }
 
     #main-section {
