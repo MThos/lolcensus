@@ -19,7 +19,7 @@ This application also makes use of Cassiopeia Library, written by **Meraki Analy
 * Redis
 * Nginx
 * Gunicorn
-* Digital Ocean (2 vCPU/4GB RAM/25GB SSD)
+* Digital Ocean (2x vCPU/4GB RAM)
 * Cloudflare (DNS/Firewall/Caching/SSL)
 
 
@@ -33,7 +33,7 @@ This application also makes use of Cassiopeia Library, written by **Meraki Analy
 
 LEAGUE CENSUS is updated the day after every **major patch** released for League of Legends.
 
-It is currently in v1.0.0.1
+The application is currently in v1.0.0.2
 
 
 ## Creators & Authors:
