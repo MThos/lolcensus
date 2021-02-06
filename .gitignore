@@ -129,3 +129,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+lolcensus/core/static/core/ddragon/.DS_Store
+.DS_Store
