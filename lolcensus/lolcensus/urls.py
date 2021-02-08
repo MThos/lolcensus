@@ -6,5 +6,7 @@ urlpatterns = [
     path('item/', include('core.urls.item_urls')),
     path('terms/', include('core.urls.terms_urls')),
     path('privacy/', include('core.urls.privacy_urls')),
+    path('cookies/', include('core.urls.cookies_urls')),
+    path('status/', include('core.urls.status_urls')),
     path('admin/', admin.site.urls),
 ]

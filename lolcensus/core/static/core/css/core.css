@@ -151,12 +151,13 @@ ul {
     padding: 25px;
 }
 
-#legal-title {
-    color: #fbc02d;
-    font-family: 'Shadows Into Light', sans-serif;
-    font-size: 2.3rem;
-    font-weight: 800;
-    margin: 15px 0;
+.legal-content {
+    margin-bottom: 10px;
+}
+
+.legal-content-sub-header {
+    margin: 30px 0 10px 0;
+    text-decoration: underline;
 }
 
 #legal-date {
@@ -174,8 +175,12 @@ ul {
     margin: 60px 0 10px 0;
 }
 
-.legal-content {
-    margin-bottom: 10px;
+#legal-title {
+    color: #fbc02d;
+    font-family: 'Shadows Into Light', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin: 15px 0;
 }
 
 #main-section {

@@ -6,7 +6,6 @@ from django.core.cache.backends.base import DEFAULT_TIMEOUT
 from django.shortcuts import render
 from django.utils import translation
 from django.views.decorators.cache import cache_page
-
 # from cassiopeia import Champion, Champions
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
