@@ -24,14 +24,14 @@ This application also makes use of Cassiopeia Library, written by **Meraki Analy
 
 
 ## Example Images
-Desktop:
+**Desktop:**
 
 [Image of Champion List](https://imgur.com/a/fosMyqa)
 
 [Image of Champion](https://imgur.com/a/GSiPPEq)
 
 
-Mobile:
+**Mobile:**
 
 [Image of Champion List](https://imgur.com/a/96X6gdX)
 
