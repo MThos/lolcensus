@@ -4,7 +4,7 @@
 
 ## Description:
 
-LEAGUE CENSUS is a **Django Web Application** for retrieval of summoner and champion information by pulling data from [Riot Games API](https://developer.riotgames.com/api/methods). The application is a work in progress and is built from code I had originally written in PHP and JavaScript many years ago and am now converting to Django. It is constantly being improved and updated. Any data is stored in **MongoDB** or comes directly from the FileSystem flat json files provided by Riot Games Data Dragon.
+LEAGUE CENSUS is a **Django Web Application** for retrieval of summoner, champion, item and server status information by pulling data from [Riot Games API](https://developer.riotgames.com/api/methods). The application is a work in progress and is built from code I had originally written in PHP and JavaScript many years ago and am now converting to Django. It is constantly being improved and updated. Any data is stored in **MongoDB** and comes directly from the FileSystem flat json files provided by Riot Games Data Dragon or by calls directly to Riot Games API (or cache). Caching of data is handled by both **Redis** and **Cloudflare**.
 
 This application also makes use of Cassiopeia Library, written by **Meraki Analytics**. You can find their Github page [here](https://github.com/meraki-analytics/cassiopeia)
 
@@ -23,9 +23,19 @@ This application also makes use of Cassiopeia Library, written by **Meraki Analy
 * Cloudflare (DNS/Firewall/Caching/SSL)
 
 
+## Example Images
+**Desktop:**
+
 [Image of Champion List](https://imgur.com/a/fosMyqa)
 
 [Image of Champion](https://imgur.com/a/GSiPPEq)
+
+
+**Mobile:**
+
+[Image of Champion List](https://imgur.com/a/96X6gdX)
+
+[Image of Champion](https://imgur.com/a/Cyn1T6b)
 
 
 ## Version:
