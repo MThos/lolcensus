@@ -8,7 +8,10 @@ from django.utils import translation
 from django.views.decorators.cache import cache_page
 # from cassiopeia import Champion, Champions
 
+
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
+
+META_DESC = "Do you love League of Legends? So do we. League Census is an information site, including champion and item rankings."
 
 
 @cache_page(CACHE_TTL)
@@ -24,7 +27,8 @@ def champion_list(request):
     return render(request, "champion/index.html", {
         "year": get_year(),
         "get_current_language": get_language(),
-        "tab_title": "League Census",
+        "tab_title": "League Census - Champions",
+        "meta_desc": META_DESC,
         "champion_names_images": champion_names_images,
         "patch": get_patch(),
     })
@@ -63,7 +67,8 @@ def champion(request, champion_name):
     return render(request, "champion/champion.html", {
         "year": get_year(),
         "get_current_language": get_language(),
-        "tab_title": "League Census",
+        "tab_title": "League Census - " + champion_name,
+        "meta_desc": META_DESC,
         "champion_data": champion_data,
         "champion_name": champion_name,
         "stats": new_stats,

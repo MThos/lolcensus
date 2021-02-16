@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://leaguecensus.com/static/core/sitemap_lolcensus.xml

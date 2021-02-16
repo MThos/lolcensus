@@ -3,14 +3,14 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 
-<html lang="{{LANGUAGE_CODE}}">
+<html lang="{{ LANGUAGE_CODE }}">
     <head>
         <meta charset="utf-8">
         <meta name="google-site-verification" content="EoCns1mG4VQ6bzBYUPLigBgIQMRBKU-8HqgYyOXxDKw">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Do you love League of Legends? So do we. League Census is an information site dedicated to Riot Games League of Legends, including champion and item rankings.">
+        <meta name="description" content="{{ meta_desc }}">
         <meta name="author" content="Mykel Agathos">
-        <title>{{tab_title}}</title>
+        <title>{{ tab_title }}</title>
         <link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon"/>
         <link rel="icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon"/>
         <link href="{% static 'core/css/core.css' %}" rel="stylesheet" type="text/css">
@@ -59,7 +59,7 @@
                     </div>
                     <div id="sitemap-center">
                         <ul class="no-bullet">
-                            <li><a href="/status">SERVER STATUS</a></li>
+                            <li><a href="https://na.leagueoflegends.com" target="_blank">LEAGUE OF LEGENDS</a></li>
                             <li><a href="https://developer.riotgames.com/" target="_blank">RIOT API</a></li>
                             <li><a href="/cookies">COOKIE POLICY</a></li>
                         </ul>
@@ -68,7 +68,7 @@
                         <ul class="no-bullet">
                             <li><a href="https://github.com/MThos/lolcensus" target="_blank">GITHUB</a></li>
                             <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="/contact">CONTACT</a></li>
                         </ul>
                     </div>
                 </div>

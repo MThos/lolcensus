@@ -93,6 +93,77 @@ ul {
     list-style-type: square;
 }
 
+#contact-container {
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+#contact-desc {
+    margin-bottom: 40px;
+}
+
+#contact-form p {
+    margin: 30px 0;
+}
+
+#contact-form button {
+    background: #fbc02d;
+    border: 2px solid rgba(50, 50, 50, 0.4);
+    border-radius: 5px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: -5px;
+    padding: 5px 10px;
+}
+
+#contact-form input {
+    background: rgba(50, 50, 50, 0.2);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    height: 20px;
+    padding: 5px;
+    width: 330px;
+}
+
+#contact-form label {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 5px;
+    padding-left: 3px;
+}
+
+#contact-form select {
+    -webkit-appearance: menulist-button;
+    background: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    height: 30px;
+    width: 210px;
+}
+
+#contact-form textarea {
+    background: rgba(50, 50, 50, 0.2);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px;
+    resize: none;
+}
+
+#contact-title {
+    color: #fbc02d;
+    font-family: 'Shadows Into Light', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin: 15px 0 40px 0;
+}
+
 .dark-line {
     color: rgba(50, 50, 50, 0.4);
     font-weight: 800;
@@ -263,6 +334,10 @@ ul {
 @media only screen and (max-width: 600px) {
     html, body {
         font-size: 1.0rem;
+    }
+
+    #contact-container {
+        padding: 15px;
     }
 
     #footer {

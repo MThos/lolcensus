@@ -1,13 +1,40 @@
 import datetime
-import requests
 from django.conf import settings
+from django.core.mail import send_mail, BadHeaderError
+from django.http import  HttpResponse, HttpResponseRedirect
 from django.core.cache.backends.base import DEFAULT_TIMEOUT
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils import translation
 from django.views.decorators.cache import cache_page
-
+from ..forms import ContactForm
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
+
+META_DESC = "Do you love League of Legends? So do we. League Census is an information site, including champion and item rankings."
+
+
+@cache_page(CACHE_TTL)
+def contact(request):
+    if request.method == "GET":
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['admin@leaguecensus.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid headerfound.')
+            return redirect('success')
+    return render(request, "core/contact.html", {
+        "year": get_year(),
+        "get_current_language": get_language(),
+        "tab_title": "League Census - Contact Us",
+        "meta_desc": META_DESC,
+        "form": form,
+    })
 
 
 @cache_page(CACHE_TTL)
@@ -15,7 +42,8 @@ def terms(request):
     return render(request, "core/terms.html", {
         "year": get_year(),
         "get_current_language": get_language(),
-        "tab_title": "League Census",
+        "tab_title": "League Census - Terms of Service",
+        "meta_desc": META_DESC,
     })
 
 
@@ -24,7 +52,8 @@ def privacy(request):
     return render(request, "core/privacy.html", {
         "year": get_year(),
         "get_current_language": get_language(),
-        "tab_title": "League Census",
+        "tab_title": "League Census - Privacy Policy",
+        "meta_desc": META_DESC,
     })
 
 
@@ -33,18 +62,8 @@ def cookies(request):
     return render(request, "core/cookies.html", {
         "year": get_year(),
         "get_current_language": get_language(),
-        "tab_title": "League Census",
-    })
-
-
-@cache_page(CACHE_TTL)
-def status(request):
-    server_status = requests.get("https://na1.api.riotgames.com/lol/status/v4/platform-data?api_key=" + settings.API_KEY)
-    print(server_status.json())
-    return render(request, "core/status.html", {
-        "year": get_year(),
-        "get_current_language": get_language(),
-        "tab_title": "League Census",
+        "tab_title": "League Census - Cookies Policy",
+        "meta_desc": META_DESC,
     })
 
 

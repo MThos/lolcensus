@@ -10,6 +10,8 @@ from collections import OrderedDict
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
+META_DESC = "Do you love League of Legends? So do we. League Census is an information site, including champion and item rankings."
+
 
 @cache_page(CACHE_TTL)
 def item_list(request):
@@ -26,7 +28,8 @@ def item_list(request):
     return render(request, "item/index.html", {
         "year": get_year(),
         "get_current_language": get_language(),
-        "tab_title": "League Census",
+        "tab_title": "League Census - Items",
+        "meta_desc": META_DESC,
         "item_names_images": item_names_images,
         "patch": get_patch(),
     })
@@ -41,6 +44,8 @@ def item(request, item_id):
     for key, value in item_json_dump['data'][item_id].items():
         item_data[key] = [value][0]
 
+    item_name = item_data['name']
+
     map_data = {'mapName': []}
     for key, value in item_json_dump['data'][item_id]['maps'].items():
         if value:
@@ -49,7 +54,8 @@ def item(request, item_id):
     return render(request, "item/item.html", {
         "year": get_year(),
         "get_current_language": get_language(),
-        "tab_title": "League Census",
+        "tab_title": "League Census - " + item_name,
+        "meta_desc": META_DESC,
         "item_data": item_data,
         "map_data": map_data,
         "item_id": item_id,

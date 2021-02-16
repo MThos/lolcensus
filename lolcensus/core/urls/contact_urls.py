@@ -3,5 +3,5 @@ from ..views import core_views
 
 app_name = 'core'
 urlpatterns = [
-    path('', core_views.status, name='status'),
+    path('', core_views.contact, name='contact'),
 ]
