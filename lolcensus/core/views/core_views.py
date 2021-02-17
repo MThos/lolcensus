@@ -20,13 +20,13 @@ def contact(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
             from_email = form.cleaned_data['from_email']
+            subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             try:
                 send_mail(subject, message, from_email, ['admin@leaguecensus.com'])
             except BadHeaderError:
-                return HttpResponse('Invalid headerfound.')
+                return HttpResponse('Invalid Header Found.')
             return redirect('success')
     return render(request, "core/contact.html", {
         "year": get_year(),

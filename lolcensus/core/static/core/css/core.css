@@ -94,7 +94,7 @@ ul {
 }
 
 #contact-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 25px;
 }
 
@@ -108,13 +108,13 @@ ul {
 
 #contact-form button {
     background: #fbc02d;
-    border: 2px solid rgba(50, 50, 50, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     color: black;
     font-size: 1.5rem;
     font-weight: 400;
     margin-top: -5px;
-    padding: 5px 10px;
+    padding: 5px;
 }
 
 #contact-form input {
@@ -132,7 +132,7 @@ ul {
     display: block;
     font-weight: 800;
     margin-bottom: 5px;
-    padding-left: 3px;
+    padding-left: 4px;
 }
 
 #contact-form select {

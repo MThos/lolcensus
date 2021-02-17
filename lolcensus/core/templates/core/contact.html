@@ -1,6 +1,10 @@
 {% extends "core/base.html" %}
 {% load static %}
 
+{% block js %}
+
+{% endblock %}
+
 {% block content %}
 <div id="main-section">
     <!-- legal-container start -->
@@ -14,7 +18,7 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="form-actions">
-                  <button type="submit">SEND MESSAGE</button>
+                    <button type="submit">SEND MESSAGE</button>
                 </div>
             </form>
         </div>
